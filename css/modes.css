@@ -50,6 +50,29 @@ body.high-contrast .competency-card:hover {
     box-shadow: none !important;
 }
 
+/* Content sections - reading state: blue border */
+body.high-contrast .content-section.reading {
+    background: #FFFFFF !important;
+    border: 4px solid #0000FF !important;
+    color: #000000 !important;
+}
+
+/* Content sections - playing state: green border */
+body.high-contrast .content-section.reading-playing {
+    background: #FFFFFF !important;
+    border: 5px solid #00FF00 !important;
+    color: #000000 !important;
+    box-shadow: 0 0 0 3px #00FF00 !important;
+}
+
+/* Content sections - paused state: yellow border */
+body.high-contrast .content-section.reading-paused {
+    background: #FFFFFF !important;
+    border: 5px solid #FFFF00 !important;
+    color: #000000 !important;
+    box-shadow: 0 0 0 3px #FFFF00 !important;
+}
+
 /* Links - blue on white with underline */
 body.high-contrast a {
     color: #0000FF !important;
@@ -145,7 +168,7 @@ body.high-contrast .footer-note {
     font-weight: 700 !important;
 }
 
-/* Section reader buttons */
+/* Section reader buttons - default: white on black */
 body.high-contrast .section-reader {
     background: #000000 !important;
     color: #FFFFFF !important;
@@ -153,9 +176,89 @@ body.high-contrast .section-reader {
     font-weight: 700 !important;
 }
 
+body.high-contrast .section-reader,
+body.high-contrast .section-reader *,
+body.high-contrast .section-reader span {
+    color: #FFFFFF !important;
+}
+
 body.high-contrast .section-reader:hover {
     background: #0000FF !important;
     border: 3px solid #0000FF !important;
+    color: #FFFFFF !important;
+}
+
+body.high-contrast .section-reader:hover,
+body.high-contrast .section-reader:hover *,
+body.high-contrast .section-reader:hover span {
+    color: #FFFFFF !important;
+}
+
+/* Section reader buttons - playing state: green/white on black */
+body.high-contrast .section-reader.reading-playing {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border: 4px solid #00FF00 !important;
+    font-weight: 900 !important;
+    box-shadow: 0 0 0 3px #00FF00 !important;
+}
+
+body.high-contrast .section-reader.reading-playing,
+body.high-contrast .section-reader.reading-playing *,
+body.high-contrast .section-reader.reading-playing span {
+    color: #FFFFFF !important;
+}
+
+body.high-contrast .section-reader.reading-playing:hover {
+    background: #00FF00 !important;
+    color: #000000 !important;
+    border: 4px solid #00FF00 !important;
+}
+
+body.high-contrast .section-reader.reading-playing:hover,
+body.high-contrast .section-reader.reading-playing:hover *,
+body.high-contrast .section-reader.reading-playing:hover span {
+    color: #000000 !important;
+}
+
+/* Section reader buttons - paused state: yellow/white on black */
+body.high-contrast .section-reader.reading-paused {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border: 4px solid #FFFF00 !important;
+    font-weight: 900 !important;
+    box-shadow: 0 0 0 3px #FFFF00 !important;
+}
+
+body.high-contrast .section-reader.reading-paused,
+body.high-contrast .section-reader.reading-paused *,
+body.high-contrast .section-reader.reading-paused span {
+    color: #FFFFFF !important;
+}
+
+body.high-contrast .section-reader.reading-paused:hover {
+    background: #FFFF00 !important;
+    color: #000000 !important;
+    border: 4px solid #FFFF00 !important;
+}
+
+body.high-contrast .section-reader.reading-paused:hover,
+body.high-contrast .section-reader.reading-paused:hover *,
+body.high-contrast .section-reader.reading-paused:hover span {
+    color: #000000 !important;
+}
+
+/* Section reader buttons - stopped state */
+body.high-contrast .section-reader.reading-stopped {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border: 3px solid #FFFFFF !important;
+}
+
+body.high-contrast .section-reader.reading-stopped,
+body.high-contrast .section-reader.reading-stopped *,
+body.high-contrast .section-reader.reading-stopped span {
+    color: #FFFFFF !important;
 }
 
 /* Bottom interaction bar */
