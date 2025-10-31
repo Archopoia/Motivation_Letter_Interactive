@@ -790,6 +790,16 @@ main {
     font-weight: 600;
 }
 
+/* Allow URLs to wrap properly */
+.competency-list a,
+.card-content a,
+.section-content a,
+.contact-info a {
+    word-break: break-all;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
 /* ========================================
    Value Statement
    ======================================== */
