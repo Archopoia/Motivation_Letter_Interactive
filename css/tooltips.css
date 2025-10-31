@@ -1,0 +1,158 @@
+/* ========================================
+   Custom Tooltips
+   ======================================== */
+
+/* Base tooltip styles - enhance default browser tooltips with custom styling */
+[title] {
+    position: relative;
+    cursor: help;
+}
+
+/* Create custom tooltip using ::before pseudo-element */
+[title]:hover::before {
+    content: attr(title);
+    position: absolute;
+    z-index: 10000;
+    pointer-events: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-width: 280px;
+    font-size: 0.8125rem;
+    line-height: 1.4;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--lhs-blue-dark);
+    color: white;
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 12px rgba(59, 100, 170, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity var(--transition-base), transform var(--transition-base);
+    animation: tooltipFadeIn var(--transition-base) forwards;
+}
+
+/* Tooltip arrow using ::after pseudo-element */
+[title]:hover::after {
+    content: '';
+    position: absolute;
+    z-index: 10001;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid var(--lhs-blue-dark);
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity var(--transition-base), transform var(--transition-base);
+    animation: tooltipFadeIn var(--transition-base) forwards;
+}
+
+/* Position tooltips for bottom toolbar buttons */
+.bottom-toolbar-btn[title]:hover::before,
+.bottom-toolbar-btn[title]:hover::after {
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.bottom-toolbar-btn[title]:hover::after {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    border-top: none;
+    border-bottom: 6px solid var(--lhs-blue-dark);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+/* Position tooltips for footer button */
+.footer-btn[title]:hover::before,
+.footer-btn[title]:hover::after {
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+.footer-btn[title]:hover::after {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0;
+    border-top: none;
+    border-bottom: 6px solid var(--lhs-blue-dark);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+/* Position tooltips for section reader buttons */
+.section-reader[title]:hover::before,
+.section-reader[title]:hover::after {
+    bottom: calc(100% + 10px);
+    right: 0;
+    transform: translateY(-5px);
+}
+
+.section-reader[title]:hover::after {
+    top: 100%;
+    right: 12px;
+    transform: none;
+    margin-top: 0;
+    border-top: none;
+    border-bottom: 6px solid var(--lhs-blue-dark);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+}
+
+/* Animation for tooltip appearance */
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced tooltip styles for better visibility */
+[title]:hover::before {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+/* Special styling for keyboard shortcuts in tooltips */
+[title]:hover::before {
+    box-shadow: 0 4px 12px rgba(59, 100, 170, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+/* High contrast mode adjustments */
+body.high-contrast [title]:hover::before {
+    background: #000;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+body.high-contrast [title]:hover::after {
+    border-bottom-color: #000;
+    border-top-color: #000;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    [title]:hover::before,
+    [title]:hover::after {
+        animation: none;
+        transition: none;
+    }
+}
+

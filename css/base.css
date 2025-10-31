@@ -1,0 +1,204 @@
+/* ========================================
+   Lambda Health System Color Scheme
+   Primary Blue: #3B64AA
+   ======================================== */
+:root {
+    /* Lambda Health System Brand Colors */
+    --lhs-blue: #3B64AA;
+    --lhs-blue-dark: #2d4d82;
+    --lhs-blue-light: #5b7ab8;
+    --lhs-blue-bright: #4a7bc5;
+    --lhs-blue-pale: #e8edf5;
+
+    /* Derived Color Palette */
+    --color-primary: var(--lhs-blue);
+    --color-primary-dark: var(--lhs-blue-dark);
+    --color-primary-light: var(--lhs-blue-light);
+    --color-primary-bright: var(--lhs-blue-bright);
+    --color-primary-pale: var(--lhs-blue-pale);
+    --color-secondary: #10b981;
+    --color-accent: #f59e0b;
+    --color-text: #1f2937;
+    --color-text-light: #6b7280;
+    --color-bg: #ffffff;
+    --color-bg-alt: #f9fafb;
+    --color-border: #e5e7eb;
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+
+    /* High Contrast Theme */
+    --hc-color-primary: var(--lhs-blue);
+    --hc-color-bg: #ffffff;
+    --hc-color-text: #000000;
+    --hc-color-border: #000000;
+
+    /* Typography */
+    --font-base-size: 1rem;
+    --font-scale-ratio: 1.2;
+    --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    --font-family-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    --line-height-base: 1.6;
+    --line-height-heading: 1.2;
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+    --radius-xl: 1rem;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(59, 100, 170, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(59, 100, 170, 0.15), 0 2px 4px -1px rgba(59, 100, 170, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(59, 100, 170, 0.2), 0 4px 6px -2px rgba(59, 100, 170, 0.15);
+    --shadow-xl: 0 20px 25px -5px rgba(59, 100, 170, 0.25);
+
+    /* Transitions */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Focus Styles */
+    --focus-outline: 3px solid var(--lhs-blue);
+    --focus-offset: 2px;
+
+    /* Reading Guide */
+    --reading-guide-color: rgba(59, 100, 170, 0.3);
+    --reading-guide-width: 4px;
+}
+
+/* ========================================
+   Reset & Base Styles
+   ======================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--font-base-size);
+    line-height: var(--line-height-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ========================================
+   Accessibility - Skip Link
+   ======================================== */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--lhs-blue);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-md);
+    text-decoration: none;
+    z-index: 10000;
+    border-radius: 0 0 var(--radius-md) 0;
+    font-weight: 600;
+    transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   High Contrast Mode
+   ======================================== */
+body.high-contrast {
+    --color-primary: var(--hc-color-primary);
+    --color-bg: var(--hc-color-bg);
+    --color-text: var(--hc-color-text);
+    --color-border: var(--hc-color-border);
+    --color-bg-alt: #f0f0f0;
+}
+
+body.high-contrast .content-section,
+body.high-contrast .competency-card {
+    border: 2px solid var(--hc-color-border);
+}
+
+body.high-contrast a {
+    color: var(--hc-color-primary);
+    text-decoration: underline;
+}
+
+/* ========================================
+   Focus Mode
+   ======================================== */
+body.focus-mode {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body.focus-mode main {
+    padding-top: 0;
+}
+
+/* ========================================
+   Reduced Motion
+   ======================================== */
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+}
+
+body.reduce-motion .content-section {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+}
+
+body.reduce-motion .section-title,
+body.reduce-motion .section-icon,
+body.reduce-motion .toolbar-btn,
+body.reduce-motion .progress-bar,
+body.reduce-motion .progress-marker,
+body.reduce-motion .competency-card,
+body.reduce-motion .highlight-box {
+    animation: none !important;
+}
+
+body.reduce-motion .content-section:hover,
+body.reduce-motion .competency-card:hover {
+    transform: translateY(-2px) !important;
+    animation: none !important;
+}
+

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive UX demonstration - Motivation letter for Lambda Health System Intern UX Design Software Engineer position">
+    <title>Motivation Letter - Lambda Health System | Interactive UX Demo</title>
+    <!-- Modular CSS Files -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/modes.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/print.css">
+    <link rel="stylesheet" href="css/tooltips.css">
+</head>
+<body>
+    <!-- Top toolbar removed - all buttons moved to bottom -->
+
+    <!-- Reading Guide Cursor -->
+    <div id="reading-guide-cursor" class="reading-guide-cursor"></div>
+
+
+    <!-- Reading Analytics Panel -->
+    <div id="reading-analytics" class="reading-analytics" hidden>
+        <div class="analytics-header">
+            <h3>Reading Insights</h3>
+            <button id="close-analytics" class="close-btn" aria-label="Close analytics">×</button>
+        </div>
+        <div class="analytics-content">
+            <div class="stat-item">
+                <span class="stat-label">Reading Time</span>
+                <span class="stat-value" id="reading-time">0:00</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Sections Visited</span>
+                <span class="stat-value" id="sections-visited">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Engagement Score</span>
+                <span class="stat-value" id="engagement-score">0%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Skip to main content link (for screen readers and keyboard users) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="letter-header" role="banner">
+        <div class="header-content">
+            <h1 class="letter-title">Motivation Letter</h1>
+            <div class="letter-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Position:</span>
+                    <span class="meta-value">Intern - UX Design Software Engineer</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Company:</span>
+                    <span class="meta-value">Lambda Health System SA</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Location:</span>
+                    <span class="meta-value">Yverdon-les-Bains, Switzerland</span>
+                </div>
+            </div>
+            <div class="ux-demo-badge" role="note" aria-label="This letter is an interactive UX demonstration">
+                <span class="badge-icon" aria-hidden="true">*</span>
+                <span>Interactive UX Demonstration — Explore advanced accessibility features</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Introduction Section -->
+        <section class="content-section section-intro" id="introduction">
+            <div class="section-header">
+                <h2 class="section-title">Dear Hiring Team at Lambda Health System,</h2>
+                <button class="section-reader" aria-label="Read section aloud" title="Read Section Aloud">
+                    <span aria-hidden="true">▶</span>
+                </button>
+            </div>
+            <div class="section-content">
+                <p class="lead-paragraph">
+                    I am writing to express my <strong class="highlight">strong interest</strong> in the Intern - UX Design Software Engineer position at Lambda Health System. Your mission to help patients with neurological disorders like stroke improve their mobility through innovative rehabilitation technology deeply resonates with both my professional expertise and personal values.
+                </p>
+                <p>
+                    Having researched your work developing game-based robotic therapies with multi-sensory feedback, I see an exceptional opportunity to combine my UX/UI design background, software development skills, and neuroscience foundation to contribute meaningfully to improving thousands of patients' quality of life.
+                </p>
+            </div>
+        </section>
+
+        <!-- Alignment Section -->
+        <section class="content-section section-alignment" id="alignment">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-icon" aria-hidden="true">→</span>
+                    Alignment with Your Mission
+                </h2>
+                <button class="section-reader" aria-label="Read section aloud" title="Read Section Aloud">
+                    <span aria-hidden="true">▶</span>
+                </button>
+            </div>
+            <div class="section-content">
+                <p>
+                    What particularly draws me to Lambda Health System is your <button class="inline-expand" data-expand="interdisciplinary" aria-expanded="false" aria-controls="expand-interdisciplinary">interdisciplinary approach</button>—integrating physiotherapy, neuroscience, and engineering to create rehabilitation solutions that are both scientifically sound and motivationally engaging.
+                </p>
+
+                <div id="expand-interdisciplinary" class="expandable-content" hidden>
+                    <p>This philosophy aligns perfectly with my own experience designing serious games and training systems. During my internship at PsychoStratégie SA (2022-2024), I designed game mechanics and worlds specifically to assess and train psychological skills in workshop environments, which taught me how crucial user-centered design is when working with users who face physical or cognitive challenges.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Neuroscience Foundation</h3>
+                    <p>
+                        My academic background in neuroscience (B.S. Neuroscience, University of Montana, specializing in Memory and Cognition) provides me with a foundational understanding of how neurological rehabilitation works and how patients process information during therapy.
+                    </p>
+                    <p>
+                        This knowledge informs my design approach, allowing me to create interfaces that:
+                    </p>
+                    <ul class="feature-list">
+                        <li>Respect cognitive load</li>
+                        <li>Accommodate various levels of physical ability</li>
+                        <li>Leverage principles of neuroplasticity through engaging, reward-based interactions</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Competencies Section -->
+        <section class="content-section section-technical" id="technical">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-icon" aria-hidden="true">[]</span>
+                    Technical Competencies
+                </h2>
+                <button class="section-reader" aria-label="Read section aloud" title="Read Section Aloud">
+                    <span aria-hidden="true">▶</span>
+                </button>
+            </div>
+            <div class="section-content">
+                <p>
+                    Currently, I am completing a Full Stack Software Development program with AI Specialization at Kood/Jõhvi (65% complete), which has strengthened my object-oriented programming skills and software development practices. This technical education complements my practical experience:
+                </p>
+
+                <div class="competency-grid">
+                    <!-- UX/UI Design Card -->
+                    <article class="competency-card" tabindex="0">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon" aria-hidden="true">◇</span>
+                                UX/UI Design
+                            </h3>
+                        </div>
+                        <div class="card-content">
+                            <ul class="competency-list">
+                                <li>
+                                    <strong>Lead Game Designer at OnceLost Games:</strong> Designed fundamental game mechanics and bridged them to UI/UX systems for complex RPG interfaces, ensuring intuitive navigation for users with diverse technical backgrounds.
+                                </li>
+                                <li>
+                                    <strong>Interactive Portfolio Website:</strong> Created <a href="https://archopoia.github.io/Hugues.W.B.dePingon/" target="_blank" rel="noopener noreferrer">archopoia.github.io/Hugues.W.B.dePingon/</a> demonstrating expertise in responsive design, user experience optimization, and engaging interfaces.
+                                </li>
+                                <li>
+                                    <strong>The Discording Tales:</strong> Designed a 300-page tabletop RPG with automated character sheets, showcasing ability to create systems that are both functional and user-friendly.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Software Development Card -->
+                    <article class="competency-card" tabindex="0">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon" aria-hidden="true">⚙</span>
+                                Software Development
+                            </h3>
+                        </div>
+                        <div class="card-content">
+                            <ul class="competency-list">
+                                <li>
+                                    <strong>Version Control:</strong> Experience with GitHub, managing multiple projects including web applications and game prototypes.
+                                </li>
+                                <li>
+                                    <strong>Web Technologies:</strong> Proficiency in HTML/CSS/JavaScript and modern web development practices, as demonstrated in projects like WorkHub and my personal portfolio.
+                                </li>
+                                <li>
+                                    <strong>Best Practices:</strong> Strong foundation in software patterns and best practices, developed through game development in Unity/C# and full-stack web projects.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Agile Development Card -->
+                    <article class="competency-card" tabindex="0">
+                        <div class="card-header">
+                            <h3 class="card-title">
+                                <span class="card-icon" aria-hidden="true">↻</span>
+                                Agile Development
+                            </h3>
+                        </div>
+                        <div class="card-content">
+                            <ul class="competency-list">
+                                <li>
+                                    <strong>Team Collaboration:</strong> Regular experience working in agile environments at OnceLost Games, collaborating with multidisciplinary teams and incorporating feedback iteratively.
+                                </li>
+                                <li>
+                                    <strong>User Testing:</strong> Adapt designs based on user testing and stakeholder input.
+                                </li>
+                                <li>
+                                    <strong>System Integration:</strong> Experience interfacing with complex software systems and APIs, having integrated LLM systems into game AI and connecting various components in full-stack applications.
+                                </li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unique Value Proposition Section -->
+        <section class="content-section section-value" id="value">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-icon" aria-hidden="true">★</span>
+                    Unique Value Proposition
+                </h2>
+                <button class="section-reader" aria-label="Read section aloud" title="Read Section Aloud">
+                    <span aria-hidden="true">▶</span>
+                </button>
+            </div>
+            <div class="section-content">
+                <p>
+                    What sets me apart is my combination of technical skills with a deep understanding of human cognition and motivation. My work at PsychoStratégie taught me how to design interfaces that accommodate users facing various challenges, while my neuroscience background helps me understand the cognitive principles behind effective rehabilitation.
+                </p>
+                <p>
+                    Additionally, my experience creating serious games gives me insight into how to make rehabilitation engaging and motivating—a critical factor in patient adherence and recovery outcomes.
+                </p>
+                <div class="value-statement">
+                    <p class="emphasis">
+                        I am particularly excited about the opportunity to work directly with therapists and patients to refine the user experience of your rehabilitation device. The prospect of seeing my work impact real-world patient outcomes is exactly the kind of meaningful contribution I seek in my career.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Fit Section -->
+        <section class="content-section section-cultural" id="cultural">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-icon" aria-hidden="true">⟷</span>
+                    Cultural Fit and Commitment
+                </h2>
+                <button class="section-reader" aria-label="Read section aloud" title="Read Section Aloud">
+                    <span aria-hidden="true">▶</span>
+                </button>
+            </div>
+            <div class="section-content">
+                <p>
+                    I am drawn to Lambda Health System's dynamic startup environment, where innovation and collaboration drive progress. Having worked in both established studios and smaller teams, I thrive in environments where I can wear multiple hats, learn quickly, and contribute to meaningful projects.
+                </p>
+                <p>
+                    <strong>I am not afraid to put in the extra effort when it directly improves patients' lives—this is not just work to me, but a mission I believe in deeply.</strong>
+                </p>
+                <p>
+                    My multilingual abilities (French, English, Italian, German, and others) would also facilitate communication within your diverse team and with the Swiss healthcare ecosystem. As a Swiss national currently based between Switzerland and Estonia, I am well-positioned to integrate smoothly into your team in Yverdon-les-Bains.
+                </p>
+            </div>
+        </section>
+
+        <!-- Conclusion Section -->
+        <section class="content-section section-conclusion" id="conclusion">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="section-icon" aria-hidden="true">→</span>
+                    Conclusion
+                </h2>
+                <button class="section-reader" aria-label="Read section aloud" title="Read Section Aloud">
+                    <span aria-hidden="true">▶</span>
+                </button>
+            </div>
+            <div class="section-content">
+                <p>
+                    Lambda Health System represents exactly the kind of innovative, purpose-driven organization where I want to grow as a UX/UI designer and software engineer. The opportunity to refine rehabilitation technology that directly improves mobility and quality of life for stroke patients and others with neurological disorders is both professionally compelling and personally meaningful.
+                </p>
+                <p>
+                    I am eager to contribute to your team's mission, learn from therapists and patients, and see my designs make a tangible difference in healthcare outcomes.
+                </p>
+                <p>
+                    I would welcome the opportunity to discuss how my unique combination of UX/UI expertise, software development skills, and neuroscience background can contribute to Lambda Health System's continued innovation. Thank you for considering my application.
+                </p>
+            </div>
+        </section>
+
+        <!-- Signature Section -->
+        <section class="content-section section-signature" id="signature">
+            <div class="signature-content">
+                <p class="signature-closing">Sincerely,</p>
+                <div class="signature-details">
+                    <div class="signature-header">
+                        <img src="assets/Hugues.W.B.dePingon - roundvignette.jpg" alt="Portrait of Hugues William Brentone de Pingon" class="signature-portrait">
+                        <div class="signature-text">
+                            <p class="signature-name"><strong>Hugues William Brentone de Pingon</strong></p>
+                        </div>
+                    </div>
+                    <div class="contact-info">
+                        <p>
+                            <a href="mailto:hugues.ii.w.b.depingon@gmail.com" aria-label="Email Hugues de Pingon">
+                                hugues.ii.w.b.depingon@gmail.com
+                            </a>
+                        </p>
+                        <p>
+                            Portfolio: <a href="https://archopoia.github.io/Hugues.W.B.dePingon/" target="_blank" rel="noopener noreferrer">archopoia.github.io/Hugues.W.B.dePingon/</a>
+                        </p>
+                        <p>
+                            LinkedIn: <a href="https://www.linkedin.com/in/hugues-ii-w-b-de-pingon/" target="_blank" rel="noopener noreferrer">linkedin.com/in/hugues-ii-w-b-de-pingon/</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reading Progress Indicator -->
+        <div class="reading-progress" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="progress-bar"></div>
+            <div class="progress-sections">
+                <span class="progress-marker" data-section="introduction"></span>
+                <span class="progress-marker" data-section="alignment"></span>
+                <span class="progress-marker" data-section="technical"></span>
+                <span class="progress-marker" data-section="value"></span>
+                <span class="progress-marker" data-section="cultural"></span>
+                <span class="progress-marker" data-section="conclusion"></span>
+            </div>
+        </div>
+
+        <!-- Summary Modal -->
+        <div id="summary-modal" class="modal" hidden role="dialog" aria-labelledby="summary-title" aria-modal="true">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="summary-title">Summary</h2>
+                    <button class="modal-close" aria-label="Close summary">×</button>
+                </div>
+                <div class="modal-body" id="summary-content">
+                    <p>Generating intelligent summary based on your reading patterns...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gesture Trail Visualization -->
+        <canvas id="gesture-canvas" class="gesture-canvas" hidden></canvas>
+    </main>
+
+    <!-- Footer -->
+    <footer class="letter-footer" role="contentinfo">
+        <div class="footer-content">
+            <p class="footer-note">
+                <span aria-hidden="true">○</span>
+                This interactive demonstration showcases UX/UI design principles including accessibility, responsive design, and user-centered interactions.
+            </p>
+            <nav class="footer-nav" aria-label="Document navigation">
+                <button id="scroll-top" class="footer-btn" aria-label="Scroll to top" title="Scroll to the top of the page">↑ Back to Top</button>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Bottom Interaction Bar -->
+    <div class="bottom-interactions" role="toolbar" aria-label="Interactive features">
+        <!-- Reading Modes -->
+        <div class="bottom-toolbar-group">
+            <button id="focus-mode" class="bottom-toolbar-btn" aria-label="Toggle focus mode for reading" title="Toggle focus mode to highlight the current reading area (Keyboard: Alt+F)">
+                <span aria-hidden="true">⊙</span> <span class="toolbar-label">Focus</span>
+            </button>
+            <button id="reading-guide" class="bottom-toolbar-btn" aria-label="Toggle reading guide" title="Toggle reading guide to highlight text as you hover (helps track reading position)">
+                <span aria-hidden="true">≡</span> <span class="toolbar-label">Guide</span>
+            </button>
+            <button id="gesture-mode" class="bottom-toolbar-btn" aria-label="Toggle gesture navigation" title="Toggle gesture navigation - draw with mouse to navigate (Keyboard: Alt+G)">
+                <span aria-hidden="true">↑</span> <span class="toolbar-label">Gestures</span>
+            </button>
+        </div>
+
+        <!-- Display Controls -->
+        <div class="bottom-toolbar-group">
+            <button id="skip-animations" class="bottom-toolbar-btn" aria-label="Toggle animations" title="Toggle animations and reduce motion (Keyboard: Alt+A)">
+                <span aria-hidden="true">∞</span> <span class="toolbar-label">Animations</span>
+            </button>
+            <button id="contrast-toggle" class="bottom-toolbar-btn" aria-label="Toggle high contrast mode" title="Toggle high contrast mode for better visibility (Keyboard: Alt+C)">
+                <span aria-hidden="true">◐</span> <span class="toolbar-label">Contrast</span>
+            </button>
+        </div>
+
+        <!-- Zoom Controls -->
+        <div class="bottom-toolbar-group">
+            <button id="font-increase" class="bottom-toolbar-btn" aria-label="Zoom in" title="Zoom in (Keyboard: Alt++)">
+                <span aria-hidden="true">+</span> <span class="toolbar-label">Zoom In</span>
+            </button>
+            <button id="font-decrease" class="bottom-toolbar-btn" aria-label="Zoom out" title="Zoom out (Keyboard: Alt+-)">
+                <span aria-hidden="true">-</span> <span class="toolbar-label">Zoom Out</span>
+            </button>
+            <button id="font-reset" class="bottom-toolbar-btn" aria-label="Reset zoom" title="Reset zoom to default (Keyboard: Alt+0)">
+                <span class="toolbar-label">Reset</span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Main JavaScript Entry Point (ES6 Modules) -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
+

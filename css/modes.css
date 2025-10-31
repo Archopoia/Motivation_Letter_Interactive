@@ -1,0 +1,430 @@
+/* ========================================
+   Display Modes - High Contrast, Focus, Reduced Motion
+   ======================================== */
+
+/* ========================================
+   High Contrast Mode
+   ======================================== */
+body.high-contrast {
+    --color-primary: #0000FF;
+    --color-bg: #FFFFFF;
+    --color-text: #000000;
+    --color-border: #000000;
+    --color-bg-alt: #FFFFFF;
+    background: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+/* Text and headings - pure black on white */
+body.high-contrast,
+body.high-contrast * {
+    color: #000000 !important;
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4,
+body.high-contrast h5,
+body.high-contrast h6,
+body.high-contrast .section-title {
+    color: #000000 !important;
+    font-weight: 900 !important;
+    border-bottom: 3px solid #000000 !important;
+    padding-bottom: 0.5rem !important;
+}
+
+/* All content sections - white background with thick black borders */
+body.high-contrast .content-section,
+body.high-contrast .competency-card,
+body.high-contrast .highlight-box,
+body.high-contrast main {
+    background: #FFFFFF !important;
+    border: 3px solid #000000 !important;
+    color: #000000 !important;
+}
+
+body.high-contrast .content-section:hover,
+body.high-contrast .competency-card:hover {
+    border: 4px solid #000000 !important;
+    box-shadow: none !important;
+}
+
+/* Links - blue on white with underline */
+body.high-contrast a {
+    color: #0000FF !important;
+    text-decoration: underline !important;
+    font-weight: 700 !important;
+    border: 1px solid #0000FF !important;
+    padding: 2px 4px !important;
+}
+
+body.high-contrast a:hover,
+body.high-contrast a:focus {
+    background: #0000FF !important;
+    color: #FFFFFF !important;
+}
+
+/* Buttons - strong borders and contrast */
+body.high-contrast .bottom-toolbar-btn {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border: 3px solid #000000 !important;
+    font-weight: 700 !important;
+}
+
+body.high-contrast .bottom-toolbar-btn:hover {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border: 3px solid #000000 !important;
+}
+
+body.high-contrast .bottom-toolbar-btn.active,
+body.high-contrast .bottom-toolbar-btn.active *,
+body.high-contrast .bottom-toolbar-btn.active .toolbar-label {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border: 4px solid #000000 !important;
+    font-weight: 900 !important;
+}
+
+body.high-contrast .bottom-toolbar-btn.active:hover {
+    background: #0000FF !important;
+    color: #FFFFFF !important;
+    border: 4px solid #0000FF !important;
+}
+
+/* Footer button */
+body.high-contrast .footer-btn {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border: 3px solid #000000 !important;
+    font-weight: 700 !important;
+}
+
+body.high-contrast .footer-btn:hover {
+    background: #0000FF !important;
+    border: 3px solid #0000FF !important;
+}
+
+/* Header */
+body.high-contrast .letter-header {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border-bottom: 5px solid #FFFFFF !important;
+}
+
+body.high-contrast .letter-title,
+body.high-contrast .meta-label,
+body.high-contrast .meta-value {
+    color: #FFFFFF !important;
+    font-weight: 900 !important;
+}
+
+/* UX Demo Badge */
+body.high-contrast .ux-demo-badge {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+    border: 3px solid #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+body.high-contrast .ux-demo-badge .badge-icon {
+    color: #000000 !important;
+}
+
+/* Footer */
+body.high-contrast .letter-footer {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border-top: 5px solid #FFFFFF !important;
+}
+
+body.high-contrast .footer-note {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+/* Section reader buttons */
+body.high-contrast .section-reader {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border: 3px solid #FFFFFF !important;
+    font-weight: 700 !important;
+}
+
+body.high-contrast .section-reader:hover {
+    background: #0000FF !important;
+    border: 3px solid #0000FF !important;
+}
+
+/* Bottom interaction bar */
+body.high-contrast .bottom-interactions {
+    background: #000000 !important;
+    border-top: 5px solid #FFFFFF !important;
+}
+
+/* Progress indicators */
+body.high-contrast .progress-bar {
+    background: #0000FF !important;
+    border: 2px solid #000000 !important;
+}
+
+body.high-contrast .progress-marker {
+    background: #000000 !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+body.high-contrast .progress-marker.visited {
+    background: #0000FF !important;
+    border: 3px solid #0000FF !important;
+}
+
+/* Reading guide highlight */
+body.high-contrast .reading-guide-highlight {
+    background: #FFFF00 !important;
+    color: #000000 !important;
+    border-left: 5px solid #0000FF !important;
+    border-right: 5px solid #0000FF !important;
+    font-weight: 700 !important;
+}
+
+/* Expand buttons */
+body.high-contrast .inline-expand {
+    background: #FFFFFF !important;
+    color: #0000FF !important;
+    border: 2px solid #0000FF !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+}
+
+body.high-contrast .inline-expand:hover {
+    background: #0000FF !important;
+    color: #FFFFFF !important;
+}
+
+/* Signature section */
+body.high-contrast .section-signature {
+    background: #FFFFFF !important;
+    border: 4px solid #000000 !important;
+}
+
+body.high-contrast .signature-portrait {
+    border: 4px solid #000000 !important;
+}
+
+/* Remove any transparency or shadows */
+body.high-contrast * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+body.high-contrast .content-section,
+body.high-contrast .competency-card,
+body.high-contrast .bottom-toolbar-btn,
+body.high-contrast .footer-btn {
+    box-shadow: none !important;
+}
+
+/* Modal */
+body.high-contrast .modal {
+    background: rgba(0, 0, 0, 0.9) !important;
+}
+
+body.high-contrast .modal-content {
+    background: #FFFFFF !important;
+    border: 5px solid #000000 !important;
+}
+
+body.high-contrast .modal-header {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border-bottom: 3px solid #FFFFFF !important;
+}
+
+body.high-contrast .modal-header h2 {
+    color: #FFFFFF !important;
+    font-weight: 900 !important;
+}
+
+body.high-contrast .modal-close {
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+    font-weight: 900 !important;
+}
+
+body.high-contrast .modal-close:hover {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+/* Analytics panel */
+body.high-contrast .reading-analytics {
+    background: #FFFFFF !important;
+    border: 4px solid #000000 !important;
+    color: #000000 !important;
+}
+
+body.high-contrast .analytics-header {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border-bottom: 3px solid #FFFFFF !important;
+}
+
+body.high-contrast .close-btn {
+    color: #FFFFFF !important;
+    border: 2px solid #FFFFFF !important;
+}
+
+body.high-contrast .close-btn:hover {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+}
+
+/* Lists */
+body.high-contrast ul,
+body.high-contrast ol,
+body.high-contrast li {
+    color: #000000 !important;
+}
+
+body.high-contrast li::marker {
+    color: #000000 !important;
+    font-weight: 900 !important;
+}
+
+/* Strong and emphasis */
+body.high-contrast strong,
+body.high-contrast b,
+body.high-contrast .highlight {
+    background: #FFFF00 !important;
+    color: #000000 !important;
+    font-weight: 900 !important;
+    padding: 2px 4px !important;
+}
+
+/* ========================================
+   Focus Mode
+   ======================================== */
+body.focus-mode {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body.focus-mode main {
+    padding-top: 0;
+}
+
+/* ========================================
+   Reduced Motion
+   ======================================== */
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    scroll-behavior: auto !important;
+}
+
+/* Disable all animations */
+body.reduce-motion .content-section,
+body.reduce-motion .section-title,
+body.reduce-motion .section-icon,
+body.reduce-motion .toolbar-btn,
+body.reduce-motion .progress-bar,
+body.reduce-motion .progress-marker,
+body.reduce-motion .competency-card,
+body.reduce-motion .highlight-box,
+body.reduce-motion .section-reader,
+body.reduce-motion .section-content,
+body.reduce-motion .section-content p,
+body.reduce-motion .feature-list li,
+body.reduce-motion .feature-list li::before,
+body.reduce-motion .highlight::after,
+body.reduce-motion .bottom-toolbar-btn,
+body.reduce-motion .footer-btn,
+body.reduce-motion .resume-option,
+body.reduce-motion .expandable-content {
+    animation: none !important;
+    transform: none !important;
+}
+
+body.reduce-motion .content-section {
+    opacity: 1 !important;
+}
+
+/* Disable ALL hover effects - no transforms, no shadows, no scale, no movement */
+body.reduce-motion .content-section:hover,
+body.reduce-motion .competency-card:hover,
+body.reduce-motion .toolbar-btn:hover,
+body.reduce-motion .bottom-toolbar-btn:hover,
+body.reduce-motion .footer-btn:hover,
+body.reduce-motion .section-reader:hover,
+body.reduce-motion .resume-option:hover,
+body.reduce-motion .inline-expand:hover,
+body.reduce-motion .competency-card:hover,
+body.reduce-motion .highlight-box:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Prevent shadow changes on hover - use original shadow if element had one */
+body.reduce-motion .content-section {
+    box-shadow: var(--shadow-sm) !important;
+}
+
+body.reduce-motion .content-section:hover {
+    box-shadow: var(--shadow-sm) !important;
+}
+
+body.reduce-motion .competency-card:hover,
+body.reduce-motion .bottom-toolbar-btn:hover,
+body.reduce-motion .footer-btn:hover,
+body.reduce-motion .section-reader:hover {
+    box-shadow: none !important;
+}
+
+/* Keep border color changes but remove transitions */
+body.reduce-motion .content-section:hover {
+    border-color: var(--lhs-blue-pale);
+    transition: none !important;
+}
+
+body.reduce-motion .competency-card:hover {
+    border-color: var(--lhs-blue-light);
+    transition: none !important;
+}
+
+/* Disable background animations */
+body.reduce-motion .highlight-box::before {
+    animation: none !important;
+    display: none !important;
+}
+
+/* Disable reading guide animations */
+body.reduce-motion .reading-guide-cursor {
+    animation: none !important;
+    transition: none !important;
+}
+
+body.reduce-motion .reading-guide-highlight {
+    transition: none !important;
+}
+
+/* Disable tooltip animations */
+body.reduce-motion [title]:hover::before,
+body.reduce-motion [title]:hover::after {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Ensure all pseudo-elements don't animate */
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+    animation: none !important;
+    transition: none !important;
+}

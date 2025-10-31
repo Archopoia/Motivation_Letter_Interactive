@@ -1,0 +1,21 @@
+/* ========================================
+   Print Styles
+   ======================================== */
+@media print {
+    .accessibility-toolbar,
+    .reading-progress,
+    .section-reader,
+    .skip-link,
+    .letter-footer,
+    .reading-guide-cursor,
+    .reading-analytics,
+    .bottom-interactions {
+        display: none;
+    }
+
+    .content-section {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}

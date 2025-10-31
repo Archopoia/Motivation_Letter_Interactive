@@ -1,0 +1,160 @@
+@media (max-width: 768px) {
+    :root {
+        --font-base-size: 0.9375rem;
+    }
+
+    .letter-header {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .letter-title {
+        font-size: 2rem;
+    }
+
+    .letter-meta {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 0 var(--spacing-md) calc(var(--spacing-lg) + 80px);
+    }
+
+    .content-section {
+        padding: var(--spacing-md);
+    }
+
+    .bottom-interactions {
+        padding: var(--spacing-sm) var(--spacing-md);
+        gap: var(--spacing-xs);
+    }
+
+    .bottom-toolbar-group {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+        justify-content: center;
+        padding: var(--spacing-xs) 0;
+    }
+
+    .bottom-toolbar-group:last-child {
+        border-bottom: none;
+    }
+
+    /* Show labels, hide symbols on mobile */
+    .bottom-toolbar-btn .toolbar-label {
+        display: inline !important;
+    }
+
+    /* Hide symbols in buttons that have labels */
+    .bottom-toolbar-btn:has(.toolbar-label) span[aria-hidden="true"] {
+        display: none !important;
+    }
+
+    /* For buttons without labels, keep them visible */
+    .bottom-toolbar-btn:not(:has(.toolbar-label)) span[aria-hidden="true"] {
+        display: inline;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .signature-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .signature-portrait {
+        width: 100px;
+        height: 100px;
+    }
+
+    .signature-text {
+        min-width: auto;
+        width: 100%;
+    }
+
+    .competency-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .letter-title {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .competency-card {
+        padding: var(--spacing-md);
+    }
+
+    .bottom-interactions {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        gap: var(--spacing-xs);
+    }
+
+    .bottom-toolbar-group {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+        justify-content: center;
+        padding: var(--spacing-xs) 0;
+    }
+
+    .bottom-toolbar-group:last-child {
+        border-bottom: none;
+    }
+
+    /* Show labels, hide symbols on mobile */
+    .bottom-toolbar-btn .toolbar-label {
+        display: inline !important;
+    }
+
+    /* Hide symbols in buttons that have labels */
+    .bottom-toolbar-btn:has(.toolbar-label) span[aria-hidden="true"] {
+        display: none !important;
+    }
+
+    /* For buttons without labels, keep them visible */
+    .bottom-toolbar-btn:not(:has(.toolbar-label)) span[aria-hidden="true"] {
+        display: inline;
+    }
+
+    .interaction-hint {
+        padding: var(--spacing-xs) var(--spacing-sm);
+        font-size: 0.75rem;
+    }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+@media print {
+    .accessibility-toolbar,
+    .reading-progress,
+    .section-reader,
+    .skip-link,
+    .letter-footer,
+    .reading-guide-cursor,
+    .reading-analytics,
+    .bottom-interactions {
+        display: none;
+    }
+
+    .content-section {
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}

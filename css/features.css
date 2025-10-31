@@ -1,0 +1,287 @@
+/* ========================================
+   Reading Guide - Enhanced Cursor & Line Highlighting
+   ======================================== */
+body.reading-guide-active {
+    cursor: none !important;
+}
+
+body.reading-guide-active * {
+    cursor: none !important;
+}
+
+.reading-guide-cursor {
+    position: fixed;
+    width: 5px;
+    height: 32px;
+    background: #ff6b35;
+    border: 3px solid #ffffff;
+    border-radius: 3px;
+    pointer-events: none;
+    z-index: 10000;
+    box-shadow: 0 0 15px rgba(255, 107, 53, 1),
+                0 0 30px rgba(255, 107, 53, 0.8),
+                0 0 45px rgba(255, 107, 53, 0.5),
+                0 4px 12px rgba(0, 0, 0, 0.4);
+    transform: translate(-50%, -50%);
+    display: none;
+    animation: cursorPulse 1.2s ease-in-out infinite;
+}
+
+body.reading-guide-active .reading-guide-cursor {
+    display: block;
+}
+
+@keyframes cursorPulse {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 15px rgba(255, 107, 53, 1),
+                    0 0 30px rgba(255, 107, 53, 0.8),
+                    0 0 45px rgba(255, 107, 53, 0.5),
+                    0 4px 12px rgba(0, 0, 0, 0.4);
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 1;
+        box-shadow: 0 0 20px rgba(255, 107, 53, 1),
+                    0 0 40px rgba(255, 107, 53, 1),
+                    0 0 60px rgba(255, 107, 53, 0.7),
+                    0 6px 16px rgba(0, 0, 0, 0.5);
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+.reading-guide-highlight {
+    background: linear-gradient(135deg, rgba(59, 100, 170, 0.15) 0%, rgba(59, 100, 170, 0.25) 100%) !important;
+    color: var(--lhs-blue-dark) !important;
+    font-weight: 600 !important;
+    border-left: 4px solid var(--lhs-blue) !important;
+    border-right: 4px solid var(--lhs-blue) !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    border-radius: 4px !important;
+    box-shadow: 0 2px 8px rgba(59, 100, 170, 0.2) !important;
+    transition: all 0.2s ease !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+body.high-contrast .reading-guide-highlight {
+    background: rgba(255, 255, 0, 0.3) !important;
+    color: var(--hc-color-text) !important;
+    border-left-color: var(--hc-color-primary) !important;
+    border-right-color: var(--hc-color-primary) !important;
+}
+
+
+/* ========================================
+   Reading Analytics Panel
+   ======================================== */
+.reading-analytics {
+    position: fixed;
+    top: 80px;
+    right: var(--spacing-md);
+    background: white;
+    border: 2px solid var(--lhs-blue);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    box-shadow: var(--shadow-xl);
+    z-index: 1500;
+    min-width: 250px;
+    animation: slideInRight var(--transition-base);
+}
+
+.analytics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--lhs-blue-pale);
+}
+
+.analytics-header h3 {
+    color: var(--lhs-blue);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text-light);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-fast);
+}
+
+.close-btn:hover {
+    background: var(--lhs-blue-pale);
+    color: var(--lhs-blue);
+}
+
+.analytics-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm);
+    background: var(--lhs-blue-pale);
+    border-radius: var(--radius-sm);
+}
+
+.stat-label {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+}
+
+.stat-value {
+    font-weight: 700;
+    color: var(--lhs-blue);
+    font-size: 1.125rem;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ========================================
+   Reading Progress with Sections
+   ======================================== */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: var(--color-border);
+    z-index: 999;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--lhs-blue) 0%, var(--lhs-blue-light) 50%, var(--lhs-blue-bright) 100%);
+    background-size: 200% 100%;
+    width: 0%;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(59, 100, 170, 0.5);
+    animation: progressShine 2s linear infinite, progressPulse 1.5s ease-in-out infinite;
+    position: relative;
+}
+
+.progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: progressWave 2s linear infinite;
+}
+
+@keyframes progressShine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+@keyframes progressPulse {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(59, 100, 170, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(59, 100, 170, 0.8);
+    }
+}
+
+@keyframes progressWave {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.progress-sections {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    pointer-events: none;
+}
+
+.progress-marker {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: -1px;
+    transition: all var(--transition-base);
+    animation: markerPulse 2s ease-in-out infinite;
+}
+
+@keyframes markerPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+.progress-marker.visited {
+    background: var(--lhs-blue);
+    box-shadow: 0 0 8px rgba(59, 100, 170, 0.8);
+    animation: markerVisitedPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes markerVisitedPulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 8px rgba(59, 100, 170, 0.8);
+    }
+    50% {
+        transform: scale(1.3);
+        box-shadow: 0 0 15px rgba(59, 100, 170, 1);
+    }
+}
+
+/* ========================================
+   Gesture Canvas
+   ======================================== */
+.gesture-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+    pointer-events: none;
+}
+

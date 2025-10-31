@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Temporary files
+*.tmp
+*.backup
+*.bak
+*.log
+
+# Node modules (if you add any later)
+node_modules/
+package-lock.json
+yarn.lock
+
